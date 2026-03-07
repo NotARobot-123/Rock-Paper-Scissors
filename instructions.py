@@ -29,13 +29,27 @@ def string_checker(question, valid_ans=("yes","no")):
         print()
 
 
-# Main routine goes here
+def instructions():
+    """prints instructions"""
+    print("""
+    ******* instructions *******
 
-rps_list = ["rock", "paper", "scissors", "xxx"]
+        To begin, choose the number of rounds. 
+        Then, play against the computer.
+        you must pick R for rock, P for paper or S for scissors.
+        The rules are as follows, paper beats rock, rock beats scissors. scissors beats paper.
+         """)
 
-want_instructions = string_checker("Do you want to see the instructions?",)
 
-print("you chose: ", want_instructions)
 
-user_choice = string_checker("choose rock/paper/scissors: ", rps_list)
-print("you chose: ", user_choice)
+# main routine starts here
+print()
+print("Rock, Paper Scissors!!")
+print()
+
+#ask user if they want instructions
+want_instructions = string_checker("Do you want the instructions?")
+
+if want_instructions == "yes":
+    instructions()
+
